@@ -12,14 +12,20 @@ function fit_profile_generator(strFitProfileFilename, strFitParamFilename)
         
         vParamValueLine = FindLineWithStr(caProfile, [caParamName{1},'_value']);
         vParamFixCalcFlagLine = FindLineWithStr(caProfile, [caParamName{1},'_var_fix']);
+        vParamRandFlagLine = FindLineWithStr(caProfile, [caParamName{1},'_randomise']);
+
         
         strNewValueLine = ReplaceNumber(caProfile{vParamValueLine}, structParams.data(vParam));
         
         strNewFixCalcFlagLine = ReplaceNumber(caProfile{vParamFixCalcFlagLine}, 1);
         
+        strNewRandFlagLine = ReplaceNumber(caProfile{vParamRandFlagLine}, 0);
+        
         caProfile{vParamValueLine} = strNewValueLine;
         
         caProfile{vParamFixCalcFlagLine} = strNewFixCalcFlagLine;
+        
+        caProfile{vParamRandFlagLine} = strNewRandFlagLine;
         
     end
     
