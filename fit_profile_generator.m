@@ -22,7 +22,7 @@ function fit_profile_generator(strFitProfileFilename, strFitParamFilename)
 
         strNewRandFlagLine = ReplaceNumber(caProfile{vParamRandFlagLine}, 0);
 
-        strNewCalcFlagLine = RepalceNumber(caProfileP{vParamCalcFlagLine}, 0);
+        strNewCalcFlagLine = ReplaceNumber(caProfile{vParamCalcFlagLine}, 0);
 
         caProfile{vParamValueLine} = strNewValueLine;
 
